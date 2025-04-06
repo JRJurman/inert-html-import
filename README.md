@@ -168,3 +168,11 @@ While not part of this proposal, the end goal is still to provide an elegant int
   </body>
 </html>
 ```
+
+## Motivation
+
+The `<template>` element is a good starting place for a couple of reasons:
+
+1. It allows us to make use of the existing and future Declarative Shadow DOM attributes already supported by browsers (`shadowrootmode`, `delegatesfocus`, etc)
+2. The inert nature of the `<template>` element means we may avoid some unclear side-effects of injecting certain elements (like a `<script>` or `<style>`) 
+3. The browser already supports the ability to change and update the contents of this element based on its attributes (this is what happens today when `shadowrootmode` is present)
